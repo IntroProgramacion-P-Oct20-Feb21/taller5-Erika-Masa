@@ -1,0 +1,122 @@
+Elaborar una solución que permita leer los datos de un automóvil (marca, origen y costo) imprima el impuesto por pagar y el precio de venta (incluido el impuesto). 
+Si el origen es Alemania el impuesto es 20%, si es de Japón el impuesto es 30%, si es de Italia, 15%, y si es de USA, 8%
+1.inicio
+2.	marca, i[0.n]
+3.	origen, i[0.n]
+4.	costo, d[0.n]
+5.	costoTotal, d[0.n]
+6.	impuesto, d[0.n]
+7.	precioVenta, d[0.n]
+8.	alemania, d[0.n]<--20%
+9.	japon, d[0.n]<--30%
+10.	italia, d[0.n]<--15%
+11.	usa, d[0.n]<--8%
+
+12.	Escribir"Marca del automovil"
+13.	leer marca
+14.	Escribir"origen del automovil"
+15.	leer origen 
+16.	Escribir"costo del automovil"
+17.	leer costo 
+
+18.	si origen = alemania  20% entonces
+19.            impuesto = (costo * porcentajeAlemania)/100;
+20.           costoTotal = costo + impuesto;
+21.	si origen = japon  30% entonces
+22.            impuesto = (costo * porcentajeJapon)/100;
+23.           costoTotal = costo + impuesto;
+24.	si origen = italia  8% entonces
+25.            impuesto = (costo * porcentajeItalia)/100;
+26.           costoTotal = costo + impuesto;
+27.      Escribir "El iva es: " + iva
+28.	Escribir "el costo total es: " + costoTotal      
+29	fin 
+-----------------------------------------------------------------------------------------------------
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author Smart
+ */
+import java.util.Locale;
+import java.util.Scanner;
+public class ejercico3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+         Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+    String marca;
+        String origen;
+        double costo;
+        double impuesto;
+        double total;
+        double porcentajeAl = 20;
+        double porcentajeJap = 30;
+        double porcentajeIta = 15;
+        double porcentajeUS = 8;
+        //Pido Datos
+        System.out.println("Ingresar la marca del automóvil");
+        marca = entrada.nextLine();
+        System.out.println("Ingresar el origen del automóvil");
+        origen = entrada.nextLine();
+        System.out.println("Ingresar el costo del automóvil");
+        costo = entrada.nextDouble();
+        // Proceso
+        if (origen.equals("Alemania")){
+            impuesto = (costo * porcentajeAl)/100;
+            total = costo + impuesto;
+            System.out.printf("El valor del impusto total a pagar es:%s\n"
+                 +"El valor total de venta es: %s\n", impuesto, total);
+        }else{
+
+            if (origen.equals("Japon")){
+                impuesto = (costo * porcentajeJap)/100;
+                total = costo + impuesto;
+
+                System.out.printf("El valor del impusto total a pagar es:%s\n"
+                 +"El valor total de venta es: %s\n", impuesto, total);
+            }else{
+
+                if (origen.equals("Italia")){
+                    impuesto = (costo * porcentajeIta);
+                    total = costo + impuesto;
+                 System.out.printf("El valor del impusto total a pagar es:%s\n"
+                 +"El valor total de venta es: %s\n", impuesto, total);
+                }else{
+
+                    if (origen.equals("USA")){
+                        impuesto = (costo * porcentajeUS)/100;
+                        total = costo + impuesto; 
+                  System.out.printf("El valor del impusto total a pagar es:%s\n"
+                 +"El valor total de venta es: %s\n", impuesto, total);
+                    }else{
+                  System.out.println("El origen del vehículo no es válido");
+                    }
+                }
+
+            }
+        } 
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+    
+}
+
+
+
+
+
