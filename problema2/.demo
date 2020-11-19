@@ -1,28 +1,4 @@
-Solución que imprima el costo de un pedido de un artículo del cual se tiene la descripción, 
-la cantidad que se requiere y el precio unitario. 
-Si la cantidad pedida excede de 50 unidades, se hace un descuento de 15%.
-1.inicio
-2.precioUnitario, d[o,n]
-3.cantidadRequerida,  d[o,n]
-4.cantidadPedida, i[o,n]
-5.valorTotal, d d[o,n]
-6.descuento,  d[o,n]
-7.porcentaje,  d[o,n]
-8.porcentaje <-- 15
-9.escribir"precio unitario"
-10.leer precioUnitario
-11.escribir"la cantidad que requiere"
-12.leer cantidadRequerida
-13.escribir"cantidad que desea llevar"
-14.leer cantidadPedida
-15.valorTotal = precioUnitario*cantidadRequerida
-16.si cantidadPedida  >= 50 entonces
-17. descuento <-- (porcentaje * valorTotal)/100
-18. valorTotal <-- valorTotal - descuento
-19.fin si 
-20.escribir" costo de un pedido: "+valorTotal
-21.fin
------------------------------------------------------------------------------------------------------
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
